@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your Energy: Get Body in shape, Stay healthy."
+    />
+
+    <link href="./css/modern-normalize.min.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Your Energy</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.svg" />
+  </head>
+  <body>
+    <header class="header">
+      <load src="./partials/header.html" />
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <load src="./partials/hero.html" />
+      <!-- Main Section -->
+      <section class="main-section">
+        <div class="container">
+          <div class="filters-wrapper">
+            <div class="exercises-header-container">
+              <h2 class="exercise-header js-exercise-header">Exercises</h2>
+              <span
+                data-exercise=""
+                class="exercise-title-span js-exercise-header-span"
+              ></span>
+            </div>
+            <div class="filters-container">
+              <form class="search-form hidden">
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Search"
+                  class="search-input"
+                />
+                <svg class="search-input-icon search-icon">
+                  <use href="./images/icons.svg#icon-search"></use>
+                </svg>
+                <svg class="search-input-icon cross-icon">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </form>
+
+              <ul class="list filters js-filters">
+                <li data-filter="Muscles" class="filter-item active">
+                  <button class="filter-item-btn">Muscles</button>
+                </li>
+                <li data-filter="Body parts" class="filter-item">
+                  <button class="filter-item-btn">Body Parts</button>
+                </li>
+                <li data-filter="Equipment" class="filter-item">
+                  <button class="filter-item-btn">Equipment</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-content">
+            <!-- Exercises Section -->
+            <load src="./partials/exercises.html" />
+            <aside class="aside">
+              <!-- Quote of the day -->
+              <load src="./partials/quote.html" />
+              <img
+                src="./images/women-sportswear-taking-break-from-workout.webp"
+                height="242"
+                srcset="
+                  ./images/women-sportswear-taking-break-from-workout.webp    1x,
+                  ./images/women-sportswear-taking-break-from-workout@2x.webp 2x,
+                  ./images/women-sportswear-taking-break-from-workout@3x.webp 3x
+                "
+                alt="Women sportswear taking break from workout"
+                class="aside-image"
+              />
+              <load src="./partials/info_block.html" />
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <load src="./partials/footer.html" />
+    </footer>
+
+    <!-- Up button -->
+    <load src="./partials/scroll_up_button.html" />
+
+    <!--  Menu -->
+    <load src="./partials/mobile_menu.html" />
+
+    <!--  Exercise pop-up -->
+    <load src="./partials/exercise_pop_up.html" />
+
+    <!--  Rating pop-up -->
+    <load src="./partials/rating_pop_up.html" />
+
+    <!-- Load scripts -->
+    <load src="./partials/index_scripts.html" />
+  </body>
+</html>

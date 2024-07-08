@@ -1,0 +1,200 @@
+.favorites-main-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.favorites-image {
+  border-radius: 20px;
+  display: block;
+  height: 119px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.practice-list {
+  background-color: var(--light);
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 40px;
+  gap: 20px;
+  flex: 1;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.favorites-text {
+  color: #242424;
+  font-size: 14px;
+  line-height: 1.2857;
+  text-align: center;
+  max-width: 318px;
+  margin: 20px auto 0 auto;
+}
+
+.favorite-hero-section {
+  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.favorites-title {
+  color: var(--dark);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.357;
+  letter-spacing: -0.02em;
+
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.favorites-container .quote {
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .favorites-main-section {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .favorites-title {
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.09091; /* 109.091% */
+    letter-spacing: -0.88px;
+
+    margin-top: 80px;
+    margin-bottom: 32px;
+  }
+
+  .favorites-container .pagination {
+    margin-top: 32px;
+  }
+
+  .favorites-container .quote {
+    max-width: unset;
+    width: 704px;
+  }
+
+  .favorites-container .info-block-min {
+    width: 342px;
+    height: 141px;
+  }
+
+  .favorite-hero-section {
+    max-width: 704px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .favorites-image {
+    margin: 0;
+    object-fit: cover;
+    width: 342px;
+    height: 141px;
+  }
+
+  .practice-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 32px;
+    margin-top: 64px;
+    align-content: start;
+  }
+
+  .favorites-text {
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: center;
+    max-width: 554px;
+    margin-top: 132px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .favorites-title {
+    margin-top: 70px;
+    margin-bottom: 32px;
+  }
+
+  .favorites-main-section {
+    padding-top: 70px;
+    padding-bottom: 63px;
+  }
+
+  .favorite-hero-section {
+    margin-bottom: unset;
+    max-width: 494px;
+    flex-direction: row;
+  }
+
+  .favorites-text {
+    align-self: flex-start;
+    font-size: 18px;
+    line-height: 1.33;
+    max-width: 554px;
+    margin-top: 114px;
+  }
+
+  .info-block-min {
+    width: 237px;
+    height: 141px;
+  }
+
+  .favorites-container .quote {
+    width: 494px;
+  }
+
+  .favorites-container .info-block-min {
+    width: 237px;
+    height: 141px;
+  }
+
+  .favorites-image {
+    width: 237px;
+    height: 141px;
+  }
+
+  .practice-list {
+    height: 487px;
+    overflow: auto;
+    margin-top: 0;
+  }
+
+  /* Customize the scrollbar for WebKit browsers */
+  .practice-list::-webkit-scrollbar {
+    width: 8px;
+    height: 153px;
+  }
+
+  .practice-list::-webkit-scrollbar-track {
+    background: #2424241a;
+    border-radius: 12px;
+  }
+
+  .practice-list::-webkit-scrollbar-thumb {
+    background: #242424;
+    border-radius: 12px;
+  }
+
+  .practice-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: pointer;
+  }
+
+  .practice-list::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  /* Customize the scrollbar for Firefox */
+  .practice-list {
+    scrollbar-width: thin;
+    scrollbar-color: #242424 #2424241a;
+    padding-right: 19px;
+  }
+}

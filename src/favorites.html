@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Your Energy: Get Body in shape, Stay healthy."
+  />
+
+  <link href="./css/modern-normalize.min.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+  <title>Your Energy</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.svg" />
+</head>
+<body>
+<header class="header">
+  <load src="./partials/header.html" />
+</header>
+<main>
+  <section class="favorites-main-section">
+    <div class="container">
+      <div class="filters-wrapper">
+        <h1 class="exercise-header">Favorites</h1>
+      </div>
+      <div class="main-content">
+        <div class="favorite-hero-section favorites-container">
+          <load src="/partials/quote.html" />
+          <load src="/partials/info_block_min.html" />
+
+          <img
+            src="./images/favorite/favorite-banner-mobile.webp"
+            srcset="
+                ./images/favorite/favorite-banner-mobile.webp     375w,
+                ./images/favorite/favorite-banner-mobile@2x.webp  750w,
+                ./images/favorite/favorite-banner-mobile@3x.webp 1125w,
+                ./images/favorite/favorite-banner-tablet.webp     768w,
+                ./images/favorite/favorite-banner-tablet@2x.webp 1536w,
+                ./images/favorite/favorite-banner-tablet@3x.webp 2304w,
+                ./images/favorite/favorite-banner-pc.webp        1440w,
+                ./images/favorite/favorite-banner-pc@2x.webp     2880w,
+                ./images/favorite/favorite-banner-pc@3x.webp     4320w
+              "
+            sizes="
+                (min-width: 1440px) 1440px,
+                (min-width: 768px) 768px,
+                (min-width: 375px) 375px,
+                100vw
+              "
+            alt="women sportswear workingout outdoors"
+            class="favorites-image"
+          />
+        </div>
+        <div class="exercises-container">
+          <p class="favorites-text visually-hidden">
+            It appears that you haven't added any exercises to your favorites
+            yet. To get started, you can add exercises that you like to your
+            favorites for easier access in the future.
+          </p>
+          <ul class="exercise-list"></ul>
+          <ul class="pagination js-pagination"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Up button -->
+<load src="./partials/scroll_up_button.html" />
+
+<!--  Menu -->
+<load src="./partials/mobile_menu.html" />
+
+<!--  Exercise pop-up -->
+<load src="./partials/exercise_pop_up.html" />
+
+<!--  Rating pop-up -->
+<load src="./partials/rating_pop_up.html" />
+
+<!-- Load scripts -->
+<load src="./partials/favorites_scripts.html" />
+</body>
+</html>

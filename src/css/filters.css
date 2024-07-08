@@ -1,0 +1,124 @@
+.filters-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-wrapper {
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .filters-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.filters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .filters-container:has(.hidden) {
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .filters-container {
+    gap: 30px;
+  }
+}
+
+.filters-container .search-form .search-input {
+  background: var(--light);
+}
+
+@media screen and (min-width: 768px) {
+  .filters-container .search-form .search-input {
+    background: var(--light);
+    width: 273px;
+  }
+}
+
+.filters-container .search-form:not(.hidden) {
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-container .search-form:not(.hidden) {
+    padding: 0;
+  }
+}
+
+.filter-item-btn {
+  display: block;
+  border: none;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: rgba(36, 36, 36, 0.6);
+  background-color: inherit;
+  padding: 0;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-item-btn {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.filter-item {
+  gap: 20px;
+}
+
+.filter-item button {
+  cursor: pointer;
+}
+
+.filter-item.active {
+  position: relative;
+}
+
+.filter-item.active button {
+  color: var(--dark);
+}
+
+.filter-item.active::after {
+  content: '';
+  color: var(--dark);
+  position: absolute;
+  bottom: 0;
+  border: 1px solid var(--dark);
+  border-radius: 2px;
+  height: 4px;
+  background-color: var(--dark);
+  left: 0;
+  right: 0;
+}

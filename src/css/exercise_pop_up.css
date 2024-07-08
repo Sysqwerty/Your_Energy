@@ -1,0 +1,225 @@
+.exercise-pop-up-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 4, 4, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  overflow: auto;
+}
+
+.exercise-pop-up-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+.exercise-pop-up-container {
+  position: relative;
+  margin: auto;
+  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: var(--dark);
+  border-radius: 20px;
+}
+
+.exercise-pop-up-close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.exercise-pop-up-close-icon {
+  stroke: var(--light);
+  transition: stroke var(--transition);
+  width: 24px;
+  height: 24px;
+}
+
+.exercise-instruction-image {
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.exercise-name {
+  color: var(--light);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.exercise-name::first-letter {
+  text-transform: capitalize;
+}
+
+.exercise-rating-wrapper {
+  margin-bottom: 20px;
+}
+
+.exercise-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 0;
+  border-top: 1px solid var(--light-20);
+  padding-top: 10px;
+  border-bottom: 1px solid var(--light-20);
+  margin-bottom: 20px;
+}
+
+.exercise-data-list-item {
+  padding-bottom: 20px;
+}
+
+.exercise-data-parameter-name {
+  color: var(--light-40);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.exercise-data-parameter-value {
+  color: var(--light);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.286;
+}
+
+.exercise-data-parameter-value::first-letter {
+  text-transform: capitalize;
+}
+
+.exercise-description {
+  color: var(--light-60);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.286;
+  margin-bottom: 40px;
+}
+
+.exercise-pop-up-container .button-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* have to have popup-btn class to increase the importance of the style */
+.popup-btn {
+  height: 42px;
+}
+
+.popup-btn .button-icon.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.exercise-pop-up-container .popup-btn .button-label {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .exercise-pop-up-container {
+    max-width: 704px;
+    padding: 32px;
+  }
+
+  .exercise-pop-up-close-btn {
+    top: 16px;
+    right: 16px;
+  }
+
+  .exercise-pop-up-close-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .exercise-instruction-image {
+    max-width: 270px;
+  }
+
+  .exercise-pop-up-content {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .exercise-name {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .exercise-rating-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .exercise-data {
+    gap: 16px;
+    row-gap: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  .exercise-data-list-item {
+    padding-bottom: 0;
+  }
+
+  .exercise-description {
+    margin-bottom: 64px;
+  }
+
+  .exercise-pop-up-container .button-container {
+    flex-direction: row;
+    gap: 7px;
+  }
+
+  .popup-btn {
+    height: 48px !important;
+    padding: 12px 8px !important;
+  }
+
+  .popup-btn .button-icon.icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .button-container .button.popup-btn:first-child {
+    min-width: 194px;
+  }
+
+  .button-container .button.popup-btn:nth-child(2) {
+    flex: 1;
+  }
+
+  .exercise-pop-up-container .popup-btn .button-label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .exercise-pop-up-container {
+    max-width: 708px;
+  }
+}
